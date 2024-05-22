@@ -115,12 +115,13 @@ y = raw_train['count']
 
 X1_train, X1_test, y_train, y_test = train_test_split(x1, y, test_size=0.2, random_state=1004)
 
-x2 = raw_train[['dayofweek', 'hour','season_c', 'holiday_c', 'workingday_c', 'weather_c', 'temp', 'atemp', 'humidity', 'windspeed']]
+x2 = raw_train[['dayofweek', 'hour', 'season_c', 'holiday_c', 'workingday_c', 'weather_c', 'temp', 'atemp', 'humidity', 'windspeed']]
 X2_train, X2_test, y_train, y_test = train_test_split(x2, y, test_size=0.2, random_state=1004)
 
 
 # 모델링 -----------------------------------------------------------------------------------------------------
 # LinearRegression 모델 학습
+# 모델 선정 이유 : 퀘스트에서 지정됨
 model1 = LinearRegression()
 model1.fit(X1_train, y_train)
 
@@ -132,6 +133,7 @@ pred1 = model1.predict(X1_test)
 pred2 = model2.predict(X2_test)
 
 # 평가
+# metrics 선정 이유 : 퀘스트에서 지정됨
 mse1 = mean_squared_error(y_test, pred1)
 rmse1 = root_mean_squared_error(y_test, pred1)
 
@@ -139,6 +141,7 @@ mse2 = mean_squared_error(y_test, pred2)
 rmse2 = root_mean_squared_error(y_test, pred2)
 
 print(mse1, mse2, rmse1, rmse2) # 똑같네!
+
 
 # 시각화 -----------------------------------------------------------------------------------------------------
 # x축에 temp 컬럼과 y 축에 count 컬럼의 관계 시각화
@@ -152,5 +155,16 @@ plt.scatter(raw_train['humidity'], raw_train['count'])
 plt.savefig('./day10_p2_2/humidity_count.png')
 
 
+# 회고 -----------------------------------------------------------------------------------------------------
+# 배운 점
+# 코드에 익숙해짐, 범주형을 category로 바꾸지 않아도 된다는걸 배움 (물론 범위를 사용해서 변수를 바꾸면 더 좋을 수도 있음 - ex. 오전 오후)
 
+# 아쉬운 점
+# 더 좋은 결과를 얻기 위해 뭘 해야 할지 생각이 잘 나지는 않더라
+
+# 느낀 점
+# 다들 똑똑하다
+
+# 어려웠던 점
+# 시각화 코드
 
