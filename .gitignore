@@ -1,0 +1,13 @@
+# 디폴트 무시된 파일
+/shelf/
+/workspace.xml
+keras_book_code/
+day10_p2_2/
+day11/
+day13/
+day14/
+0529_kaggle/
+.idea/
+.vscode/
+playground/
+리서치_모듈커리큘럼.pdf
