@@ -7,7 +7,7 @@
 # 파일 예외
 !*.py
 !*.ipynb
-!*.mb
+!*.md
 
 # 폴더 내부 파일 포함
 !*/
@@ -15,20 +15,20 @@
 # 폴더 내부 파일 포함
 !**/*.py
 !**/*.ipynb
-!**/*.mb
+!**/*.md
 
 # other 폴더 내의 파일 무시
 /other/*.py
 /other/*.ipynb
-/other/*.mb
+/other/*.md
 /other/**/*.py
 /other/**/*.ipynb
-/other/**/*.mb
+/other/**/*.md
 /DLthon/*.py
 /DLthon/*.ipynb
-/DLthon/*.mb
+/DLthon/*.md
 /DLthon/**/*.py
 /DLthon/**/*.ipynb
-/DLthon/**/*.mb
+/DLthon/**/*.md
 
 .idea/*
