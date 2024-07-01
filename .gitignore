@@ -24,5 +24,11 @@
 /other/**/*.py
 /other/**/*.ipynb
 /other/**/*.mb
+/DLthon/*.py
+/DLthon/*.ipynb
+/DLthon/*.mb
+/DLthon/**/*.py
+/DLthon/**/*.ipynb
+/DLthon/**/*.mb
 
 .idea/*
